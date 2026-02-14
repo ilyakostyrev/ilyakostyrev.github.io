@@ -1,0 +1,10 @@
+@import "importStyle.css";
+
+.container{
+    display: flex;
+}
+.inner{
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 25%;
+}
