@@ -4,9 +4,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 .inner{
+    display: flex;
     background-color: red;
     border: 1px solid black;
     border-radius: 25%;
+    height: 200px;
+    width: 400px;
+    justify-content: center ;
+    align-items: center;
 }
