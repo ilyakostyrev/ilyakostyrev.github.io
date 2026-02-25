@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Семантическая верстка</title>
+    <style>
+        /* Стили почти как в блочной верстке, но селекторы по тегам */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .page {
+            width: 600px;
+            margin: 20px auto;
+            border: 2px solid #333;
+        }
+        header {
+            background-color: #a8d5ff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+        /* Обертка для основной части, чтобы использовать flex или clearfix */
+        .main-content {
+            overflow: auto; /* Простой clearfix */
+        }
+        aside {
+            background-color: #f0e68c;
+            width: 150px;
+            float: left;
+            padding: 15px;
+            box-sizing: border-box;
+            min-height: 150px;
+        }
+        main {
+            background-color: #fff0e0;
+            margin-left: 150px;
+            padding: 15px;
+            min-height: 150px;
+        }
+        footer {
+            background-color: #c0c0c0;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page"> <!-- Оборачиваем всю страницу, чтобы центрировать -->
+        <header>
+            <h1>[Семантический header]</h1>
+            <nav>Главная | О нас | Контакты</nav> <!-- Тег nav для навигации -->
+        </header>
+
+        <div class="main-content"> <!-- Этот div нужен для float-обертки -->
+            <aside>
+                <h3>Сайдбар (aside)</h3>
+                <p>Дополнительная информация, ссылки.</p>
+            </aside>
+
+            <main>
+                <h2>Основной контент (main)</h2>
+                <article>
+                    <p>Это статья (<article>). Здесь находится главный текст страницы. Семантические теги помогают поисковикам и скринридерам понимать структуру документа.</p>
+                </article>
+            </main>
+        </div>
+
+        <footer>
+            <p>[Подвал] Копирайт 2026. Контакты в footer.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Блочная верстка (div)</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: 20px auto; /* Центрируем весь блок */
+            border: 2px solid #333;
+            padding: 0; /* Убираем отступы, чтобы блоки прилегали плотно */
+        }
+        .header {
+            background-color: #a8d5ff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+        .sidebar {
+            background-color: #f0e68c;
+            width: 150px;
+            float: left; /* Прижимаем сайдбар влево */
+            padding: 15px;
+            box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+            min-height: 150px;
+        }
+        .content {
+            background-color: #fff0e0;
+            margin-left: 150px; /* Отступ равен ширине сайдбара */
+            padding: 15px;
+            min-height: 150px;
+        }
+        .footer {
+            background-color: #c0c0c0;
+            padding: 10px;
+            text-align: center;
+            clear: both; /* Отменяем обтекание, чтобы подвал был снизу */
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">[Шапка сайта] Логотип и меню</div>
+        <div class="sidebar">[Сайдбар] Меню слева</div>
+        <div class="content">[Контент] Основной текст страницы. Блочная верстка.</div>
+        <div class="footer">[Подвал] Копирайт 2026</div>
+    </div>
+
+</body>
+</html>
