@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>5 объектов: анимация и трансформация</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        /* Базовый стиль для всех объектов */
+        .object {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease; /* Плавность для ховеров */
+        }
+
+        /* Объект 1: Вращение (rotate) */
+        .object1 {
+            background-color: #e74c3c;
+        }
+        .object1:hover {
+            transform: rotate(360deg);
+            transition: transform 1s ease;
+        }
+
+        /* Объект 2: Изменение размера (scale) */
+        .object2 {
+            background-color: #2ecc71;
+        }
+        .object2:hover {
+            transform: scale(1.3);
+            background-color: #27ae60;
+        }
+
+        /* Объект 3: Перемещение (translate) */
+        .object3 {
+            background-color: #f39c12;
+        }
+        .object3:hover {
+            transform: translate(30px, -20px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        /* Объект 4: Бесконечная анимация (пульсация) */
+        .object4 {
+            background-color: #9b59b6;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); background-color: #8e44ad; }
+            100% { transform: scale(1); }
+        }
+
+        /* Объект 5: Наклон и изменение формы (skew + border-radius) */
+        .object5 {
+            background-color: #1abc9c;
+            transition: all 0.5s ease;
+        }
+        .object5:hover {
+            transform: skew(10deg, 5deg);
+            border-radius: 50%; /* Превращается в круг */
+            background-color: #16a085;
+        }
+
+        /* Дополнительно: комбинированная трансформация при наведении */
+        .object5:active {
+            transform: skew(0deg, 0deg) rotate(180deg);
+            border-radius: 10px;
+        }
+
+        /* Подписи для наглядности */
+        .caption {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="item">
+        <div class="object object1">1. Вращение (rotate)<br>Наведи курсор</div>
+        <div class="caption">rotate(360deg)</div>
+    </div>
+
+    <div class="item">
+        <div class="object object2">2. Увеличение (scale)<br>Наведи курсор</div>
+        <div class="caption">scale(1.3)</div>
+    </div>
+
+    <div class="item">
+        <div class="object object3">3. Перемещение (translate)<br>Наведи курсор</div>
+        <div class="caption">translate(30px, -20px)</div>
+    </div>
+
+    <div class="item">
+        <div class="object object4">4. Пульсация<br>Бесконечная анимация</div>
+        <div class="caption">animation: pulse</div>
+    </div>
+
+    <div class="item">
+        <div class="object object5">5. Наклон (skew)<br>Наведи курсор</div>
+        <div class="caption">skew(10deg, 5deg) + круг</div>
+    </div>
+
+</body>
+</html>
