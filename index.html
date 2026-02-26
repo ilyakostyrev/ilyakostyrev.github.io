@@ -1,21 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Мои практические работы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .practices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        
+        .practice-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .practice-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #2193b0, #6dd5ed);
+        }
+        
+        .practice-number {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #2193b0, #6dd5ed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .practice-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .practice-type {
+            font-size: 0.85em;
+            color: #666;
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+            color: #666;
+        }
+        
+        .footer i {
+            color: #e25555;
+        }
+        
+        @media (max-width: 600px) {
+            .practices-grid {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <a href="1\index.html">Практика 1</a>
-    <a href="2\index.html">Практика 2</a>
-    <a href="3\index.html">Практика 3</a>
-    <a href="4\index.html">Практика 4</a>
-    <a href="5\index.html">Практика 5</a>
-    <a href="6\index.html">Практика 6</a>
-    <a href="7\index.html">Практика 7</a>
-    <a href="8\index.html">Практика 8</a>
-    <a href="9\index.html">Практика 9</a>
-    <a href="10\1.html">Практика 10</a>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Мои практические работы</h1>
+            <p>Коллекция выполненных заданий по веб-разработке</p>
+        </div>
+        
+        <div class="practices-grid">
+            <a href="1/index.html" class="practice-card">
+                <span class="practice-number">01</span>
+                <span class="practice-title">Практическая работа №1</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="2/index.html" class="practice-card">
+                <span class="practice-number">02</span>
+                <span class="practice-title">Практическая работа №2</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="3/index.html" class="practice-card">
+                <span class="practice-number">03</span>
+                <span class="practice-title">Практическая работа №3</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="4/index.html" class="practice-card">
+                <span class="practice-number">04</span>
+                <span class="practice-title">Практическая работа №4</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="5/index.html" class="practice-card">
+                <span class="practice-number">05</span>
+                <span class="practice-title">Практическая работа №5</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="6/index.html" class="practice-card">
+                <span class="practice-number">06</span>
+                <span class="practice-title">Практическая работа №6</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="7/index.html" class="practice-card">
+                <span class="practice-number">07</span>
+                <span class="practice-title">Практическая работа №7</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="8/index.html" class="practice-card">
+                <span class="practice-number">08</span>
+                <span class="practice-title">Практическая работа №8</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="9/index.html" class="practice-card">
+                <span class="practice-number">09</span>
+                <span class="practice-title">Практическая работа №9</span>
+                <span class="practice-type">HTML/CSS</span>
+            </a>
+            
+            <a href="10/1.html" class="practice-card">
+                <span class="practice-number">10</span>
+                <span class="practice-title">Практическая работа №10</span>
+                <span class="practice-type">JavaScript</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Сделано с ❤️ для защиты практических работ</p>
+        </div>
+    </div>
 </body>
 </html>
