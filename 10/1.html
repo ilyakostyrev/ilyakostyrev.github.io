@@ -45,20 +45,9 @@
   line-height: auto;
 
      }
-     .dropdown-menu.show {
-  animation: slideIn 0.3s ease-out;
-}
+    
 
-@keyframes slideIn {
-  from {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+
 
 .carousel-animate .carousel-indicators > li {
          margin: 0 2px;
@@ -136,7 +125,7 @@
                     <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
                       <img src="image 1.png" alt="настройки" height="129px" width="129px">
                     </button>
-                    <ul class="dropdown-menu fade">
+                    <ul class="dropdown-menu ">
                       <li><a class="dropdown-item" href="#">Конфиденциальность</a></li>
                       <li><a class="dropdown-item" href="#">Рекомендации</a></li>
                       <li><a class="dropdown-item" href="#">Сотрудничество</a></li>
@@ -153,68 +142,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <style>
-    .carousel-animate .carousel-indicators > li {
-     margin: 0 2px;
-     background-color: #fff;
-     border-color: rgb(58,36,83);
-     opacity: .7;
-    }
-    .carousel-animate .carousel-indicators > li.active {
-     width: 10px;
-     height: 10px;
-     opacity: 1;
-    }
-    .carousel-animate .hero {
-     color: #fff;
-     text-align: center;
-     text-transform: uppercase;
-     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
-    }
-    .btn.btn-lg {
-     padding: 10px 40px;
-    }
-    .btn.btn-hero,
-    .btn.btn-hero:hover,
-    .btn.btn-hero:focus {
-     color: #fff;
-     background-color: #694198;
-     border-color: rgb(67,41,97);
-     outline: none;
-     margin: 20px auto;
-    }
-    @media screen and (max-width: 640px) {
-     .hero h1 {
-     font-size: 2em;
-     }
-    }
-    .carousel-fade .carousel-inner .item {
-     transition-property: opacity;
-    }
-    .carousel-fade .carousel-inner .item,
-    .carousel-fade .carousel-inner .active.left,
-    .carousel-fade .carousel-inner .active.right {
-     opacity: 0;
-    }
-    .carousel-fade .carousel-inner .active,
-    .carousel-fade .carousel-inner .next.left,
-    .carousel-fade .carousel-inner .prev.right {
-     opacity: 1;
-    }
-    .carousel-fade .carousel-inner .next,
-    .carousel-fade .carousel-inner .prev,
-    .carousel-fade .carousel-inner .active.left,
-    .carousel-fade .carousel-inner .active.right {
-     left: 0;
-     transform: translate3d(0, 0, 0);
-    }
-    .carousel-bg .carousel-inner .item {
-     background-color: darkslategrey;
-     background-size: cover;
-     background-position: center;
-     min-height: 480px;
-    }
-    </style>
+    
     
     <div class="container">
      <div class="row">
