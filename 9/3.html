@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<style>
+  #container {
+    width: 500px;
+    height: 400px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+  #box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
 </head>
 <body>
-    
+
+<div id="container">
+  <div id="box"></div>
+</div>
+
+<script>
+  const box = document.getElementById('box');
+  const container = document.getElementById('container');
+  
+  let posX = 0, posY = 0;
+  let velX = 4, velY = 4;
+  const boxSize = 50;
+  const containerWidth = 500;
+  const containerHeight = 400;
+
+  function getRandomColor() {
+    return '#' + Math.floor(Math.random()*16777215).toString(16);
+  }
+
+  function moveBox() {
+    posX += velX;
+    posY += velY;
+
+    // Удар о границы
+    if (posX + boxSize > containerWidth || posX < 0) {
+      velX = -velX;
+      box.style.backgroundColor = getRandomColor();
+    }
+    if (posY + boxSize > containerHeight || posY < 0) {
+      velY = -velY;
+      box.style.backgroundColor = getRandomColor();
+    }
+
+    box.style.left = posX + 'px';
+    box.style.top = posY + 'px';
+    requestAnimationFrame(moveBox);
+  }
+
+  moveBox();
+</script>
+
 </body>
 </html>
