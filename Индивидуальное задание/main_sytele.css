@@ -97,8 +97,10 @@ table {
 	background-color: #6D6A6A;
 }
 .btn_footer{
-	color: black;
+	color: #FFFFFF;
 	text-align: center;
+	font-size: 1.667vw;
+	font-family: inter;
 }
 .btn_footer_container{
 	margin-left: 4.167vw;
