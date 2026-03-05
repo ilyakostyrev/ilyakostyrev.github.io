@@ -1,0 +1,98 @@
+.main{
+    background-color: #DEEBDF;
+}
+.block-1_main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 24.306vw;
+    background-image: url('./img/Rectangle 8.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.block-1_main_container div{
+    width: 90.625vw;
+    height: 14.653vw;
+    margin-top: 1.042vw;
+    margin-bottom:2.778vw ;
+}
+.block-1_main_container div h2{
+    color:#FFFFFF ;
+    font-size: 2.5vw;
+    font-family: "Kavivanar";
+    line-height: auto;
+}
+.block-1_main_container div p{
+    color: #FFFFFF;
+    font-size: 2.5vw;
+    font-family: "Kavivanar";
+    line-height: auto;
+}
+.block-2_main_container{
+    width: 92.153vw;
+    height: 54vw;
+    margin-left: 5.903vw;
+    margin-right: 4.861vw;
+    margin-top:0.556vw ;
+    display: flex;
+    flex-direction: column;
+    gap: 2.917vw;
+}
+
+.block-2_main_container div img{
+    height: 11.319vw;
+    width:16.944vw;
+    
+}
+.rel{
+    margin-top: 2.361vw;
+}
+.block-2_main_inner_conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9.722vw;
+}
+.block-2_main_inner_conteiner div{
+    width: 70.764vw;
+    
+}
+.block-2_main_inner_conteiner div ol{
+    list-style-type: disc;
+    margin-top: 1.389vw;
+}
+.block-2_main_inner_conteiner div ol li{
+    font-family: Inter;
+    font-size: 1.667vw;
+}
+.block-2_main_inner_conteiner div  h2{
+    font-family: Inter;
+    font-size: 2.5vw;
+}
+.block-3_main_container{
+    height: 11.806vw;
+    background-image: url('./img/Rectangle 9.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.block-3_main_container div{
+    width: 91.875vw;
+    height: 6.528vw;
+}
+.block-3_main_container div h2{
+    color: #FFFFFF;
+    font-family: "Kavivanar";
+    line-height: auto;
+    font-size: 2.222vw;
+    text-align: center;
+}
+.main_img_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
