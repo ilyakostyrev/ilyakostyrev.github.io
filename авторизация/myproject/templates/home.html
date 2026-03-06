@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="auth-card text-center">
+    <h1 class="mb-4">Добро пожаловать!</h1>
+    
+    {% if user.is_authenticated %}
+        <p class="lead">Привет, <strong>{{ user.username }}</strong>!</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Вы успешно вошли в систему.</p>
+        <a href="{% url 'profile' %}" class="btn btn-primary">Профиль</a>
+    {% else %}
+        <p class="lead">Пожалуйста, войдите или зарегистрируйтесь</p>
+        <div class="d-grid gap-2">
+            <a href="{% url 'login' %}" class="btn btn-primary">Войти</a>
+            <a href="{% url 'register' %}" class="btn btn-outline-primary">Регистрация</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
