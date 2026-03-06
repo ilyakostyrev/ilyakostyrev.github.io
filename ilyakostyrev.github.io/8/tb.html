@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Табличная верстка</title>
+    <style>
+        /* Минимум стилей для наглядности */
+        table {
+            width: 600px;
+            border-collapse: collapse; /* Убираем двойные границы */
+            margin: 20px auto; /* Центрируем таблицу */
+            border: 2px solid #333;
+        }
+        td {
+            border: 1px solid #777;
+            padding: 15px;
+            text-align: center;
+            vertical-align: top;
+        }
+        .header {
+            background-color: #a8d5ff;
+            height: 80px;
+        }
+        .sidebar {
+            background-color: #f0e68c;
+            width: 150px;
+        }
+        .content {
+            background-color: #fff0e0;
+            height: 200px;
+        }
+        .footer {
+            background-color: #c0c0c0;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <!-- Шапка сайта -->
+        <tr>
+            <td colspan="2" class="header">[Шапка сайта] Логотип и меню</td>
+        </tr>
+        <!-- Основная часть: сайдбар + контент -->
+        <tr>
+            <td class="sidebar">[Сайдбар] Меню слева</td>
+            <td class="content">[Контент] Основной текст страницы.</td>
+        </tr>
+        <!-- Подвал -->
+        <tr>
+            <td colspan="2" class="footer">[Подвал] Копирайт 2026</td>
+        </tr>
+    </table>
+
+</body>
+</html>
