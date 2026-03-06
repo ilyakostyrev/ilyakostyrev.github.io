@@ -9,6 +9,9 @@
     text-align: center;
     display: flex;
     padding-top: 1.25vw;
+    font-family: inter;
+    font-weight: 600;
+    font-size:1.667vw; 
 }
 .curce_container{
     height: auto;
