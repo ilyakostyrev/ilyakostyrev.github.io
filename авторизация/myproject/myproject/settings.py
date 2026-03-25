@@ -35,8 +35,8 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],  # Добавьте это для глобальных шаблонов
+        'APP_DIRS': True,  # Это должно быть True
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
